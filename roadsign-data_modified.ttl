@@ -1,0 +1,713 @@
+@prefix rss:  <http://www.iiia.csic.es/~marco/kr/roadsign-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_151646.jpg> 
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b0 .
+
+_:b0    rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "NCS S 2065-R90B" ;
+        rss:border_colour  "NCS S 0502-B" ;
+        rss:symbol         "P" ;
+        rss:symbol_colour  "NCS S 0502-B" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_151915.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b1 .
+
+_:b1    rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "blue" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "left arrow" ;
+        rss:symbol_colour  "white" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_151932.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b2 .
+
+_:b2    rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "NCS S 2060-R30B" ;
+        rss:symbol         "horizontal bar" ;
+        rss:symbol_colour  "NCS S 0502-B" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_152049.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b3 .
+
+_:b3    rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "NCS S 2065-R90B" ;
+        rss:border_colour  "NCS S 0502-B" ;
+        rss:symbol         "pedestrian crossing" ;
+        rss:symbol_colour  "NCS S 9000-N" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_152104.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b4 .
+
+_:b4    rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "blue" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "pedestrian crossing" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_152836.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b5 ;
+        foaf:depicts  _:b6 .
+
+_:b5    rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" .
+
+_:b6    rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "black" ;
+        rss:symbol         "text" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "Excepte emergències" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_152933.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b7 .
+
+_:b7    rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "blue" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "P Motos" ;
+        rss:symbol_colour  "white" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153121.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b8 .
+
+_:b8    rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "blue" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "down-right arrow" ;
+        rss:symbol_colour  "white" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153131.jpg> 
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b9 .
+
+_:b9    rdf:type           rss:road_sign ;
+        rss:shape          "inverted triangle" ;
+        rss:ground_colour  "NCS S 0502-B" ;
+        rss:border_colour  "NCS S 3060-R10B" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153238.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b10 .
+
+_:b10   rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "blue" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "P" ;
+        rss:symbol_colour  "white" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153449.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b11 ;
+        foaf:depicts  _:b12 .
+
+_:b11   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "NCS S 0502-B" ;
+        rss:border_colour  "NCS S 2060-R30B" ;
+        rss:symbol         "speed" ;
+        rss:symbol_colour  "NCS S 9000-N" ;
+        rss:symbol_value   "30" .
+
+_:b12   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "NCS S 0502-B" ;
+        rss:border_colour  "NCS S 2060-R30B" ;
+        rss:symbol         "pedestrian crossing" ;
+        rss:symbol_colour  "NCS S 9000-N" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153534.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b13 .
+
+_:b13   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "pedestrian crossing" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153657.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b14 ;
+        foaf:depicts  _:b15 .
+
+_:b14   rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "NCS S 2065-R90B" ;
+        rss:border_colour  "NCS S 0502-B" ;
+        rss:symbol         "pedestrian" ;
+        rss:symbol_colour  "NCS S 0502-B" .
+
+_:b15   rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "NCS S 0502-B" ;
+        rss:border_colour  "NCS S 9000-N" ;
+        rss:symbol         "text" ;
+        rss:symbol_colour  "NCS S 9000-N" ;
+        rss:symbol_value   "TRAM AMB ESCALES" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153829.jpg> 
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b16 ;
+        foaf:depicts  _:b17 .
+
+_:b16   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "circular arrows" ;
+        rss:symbol_colour  "black" .
+
+_:b17   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "speed" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "30" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154050.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b18 .
+
+_:b18   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "bump" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154211.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b19 .
+
+_:b19   rdf:type           rss:road_sign ;
+        rss:shape          "inverted triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154226.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b20 .
+
+_:b20   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;  
+        rss:ground_colour  "NCS S 2065-R90B" ;
+        rss:border_colour  "NCS S 0502-B" ;
+        rss:symbol         "circular arrows" ;
+        rss:symbol_colour  "NCS S 0502-B" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154252.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b21 .
+
+_:b21   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "height" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "4,9 m" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154357.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b22 ;
+        foaf:depicts  _:b23 ;
+        foaf:depicts  _:b24 .
+
+_:b22   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "bump" ;
+        rss:symbol_colour  "black" .
+
+_:b23   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "!" ;
+        rss:symbol_colour  "black" .
+
+_:b24   rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "black" ;
+        rss:symbol         "text" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "Sortida de Bombers" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154425.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b25 .
+
+_:b25   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "bump" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154451.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b26 .
+
+_:b26   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "pedestrian crossing" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154517.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b27 .
+
+_:b27   rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "blue" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "pedestrian crossing" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154627.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b28 .
+
+_:b28   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "blue" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "right arrow" ;
+        rss:symbol_colour  "white" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154708.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b29 .
+
+_:b29   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "red" ;
+        rss:symbol         "horizontal bar" ;
+        rss:symbol_colour  "white" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154744.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-02-02" ;
+        foaf:depicts  _:b30 .
+
+_:b30   rdf:type           rss:road_sign ;
+        rss:shape          "inverted triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_145544.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b31 ;
+        foaf:depicts  _:b32 .
+
+_:b31   rdf:type           rss:road_sign ;
+        rss:shape          "octagon" ;
+        rss:ground_colour  "NCS S 2060-R30B" ;
+        rss:border_colour  "NCS S 0502-B" ;
+        rss:symbol         "STOP" ;
+        rss:symbol_colour  "NCS S 0502-B" .
+
+_:b32   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "NCS S 3065-R90B" ;
+        rss:border_colour  "NCS S 0502-B" ;
+        rss:symbol         "right arrow" ;
+        rss:symbol_colour  "NCS S 0502-B" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_145957.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b33 .
+
+_:b33   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "mass" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "6 t" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150013.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b34 .
+
+_:b34   rdf:type           rss:road_sign ;
+        rss:shape          "inverted triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150134.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b35 .
+
+_:b35   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "speed" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "30" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150134.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b36 .
+
+_:b36   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "children" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150236.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b37 .
+
+_:b37   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "dangerous shoulder" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150646.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b38 .
+
+_:b38   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "dangerous shoulder" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150834.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b39 ;
+        foaf:depicts  _:b40 .
+
+_:b39   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "intersection" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "road from left" .
+
+_:b40   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "pedestrian" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150907.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b41 .
+
+_:b41   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "up-down arrows" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150918.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b42 .
+
+_:b42   rdf:type           rss:road_sign ;
+        rss:shape          "octagon" ;
+        rss:ground_colour  "red" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "STOP" ;
+        rss:symbol_colour  "white" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_151100.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b43 ;
+        foaf:depicts  _:b44 .
+
+_:b43   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "intersection" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "road from left" .
+
+_:b44   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "speed" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "30" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_151153.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b45 .
+
+_:b45   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "!" ;
+        rss:symbol_colour  "black" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_152004.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b46 ;
+        foaf:depicts  _:b47 .
+
+_:b46   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "NCS S 0502-B" ;
+        rss:border_colour  "NCS S 2060-R30B" ;
+        rss:symbol         "lorry mass" ;
+        rss:symbol_colour  "NCS S 9000-N" ;
+        rss:symbol_value   "3,5 t" .
+
+_:b47   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "NCS S 2060-R30B" ;
+        rss:border_colour  "NCS S 2060-R30B" ;
+        rss:symbol         "diagonal bar" ;
+        rss:symbol_colour  "NCS S 2060-R30B" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_152542.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b48 .
+
+_:b48   rdf:type           rss:road_sign ;
+        rss:shape          "rectangle with arrowhead" ;
+        rss:ground_colour  "NCS S 0502-B" ;
+        rss:border_colour  "NCS S 9000-N" ;
+        rss:symbol         "text" ;
+        rss:symbol_colour  "NCS S 9000-N" ;
+        rss:symbol_value   "Escola de Postgrau" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_153047.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b49 .
+
+_:b49   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "height" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "4,2 m" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_153602.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b50 .
+
+_:b50   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "speed" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "20" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_153901.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b51 .
+
+_:b51   rdf:type           rss:road_sign ;
+        rss:shape          "octagon" ;
+        rss:ground_colour  "red" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "STOP" ;
+        rss:symbol_colour  "white" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_153931.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b52 .
+
+_:b52   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "height" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "4 m" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_184053.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b53 .
+
+_:b53   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "NCS S 2065-R90B" ;
+        rss:border_colour  "NCS S 0502-B" ;
+        rss:symbol         "bicycle" ;
+        rss:symbol_colour  "NCS S 0502-B" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_184212.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b54 ;
+        foaf:depicts  _:b55 .
+
+_:b54   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "dangerous descent" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "12 %" .
+
+_:b55   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "blue" ;
+        rss:border_colour  "white" ;
+        rss:symbol         "bicycle" ;
+        rss:symbol_colour  "white" .
+
+<http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_184317.jpg>
+        rdf:type      foaf:Image ;
+        dc:creator    "Marco Schorlemmer" ;
+        dc:date       "2023-03-14" ;
+        foaf:depicts  _:b56 ;
+        foaf:depicts  _:b57 ;
+        foaf:depicts  _:b58 .
+
+_:b56   rdf:type           rss:road_sign ;
+        rss:shape          "triangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "!" ;
+        rss:symbol_colour  "black" .
+
+_:b57   rdf:type           rss:road_sign ;
+        rss:shape          "rectangle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "black" ;
+        rss:symbol         "text" ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "ZONA INUNDABLE" .
+
+_:b58   rdf:type           rss:road_sign ;
+        rss:shape          "circle" ;
+        rss:ground_colour  "white" ;
+        rss:border_colour  "red" ;
+        rss:symbol         "mass on axle " ;
+        rss:symbol_colour  "black" ;
+        rss:symbol_value   "10 t" .

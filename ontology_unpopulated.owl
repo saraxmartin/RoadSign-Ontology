@@ -1,0 +1,2088 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/TeamD/roadsign.owl#"
+     xml:base="http://www.semanticweb.org/TeamD/roadsign.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#borderColor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#groundColor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#shape -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#shape">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#symbol -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#symbol">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#image -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#image"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#imageCreator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#imageCreator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#image"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#imageDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#imageDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#image"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#InformativeSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#InformativeSign"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ExcepteEmergènciesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SortidaBombersSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#TramEscalesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ZonaInundableSign"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_2waysSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_2waysSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#UP-DOWN_ARROWS"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_ChildrenSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_ChildrenSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#CHILDREN"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#!"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerousDescentSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerousDescentSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#DANGEROUS_DESCENT"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerousShoulderSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerousShoulderSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#DANGEROUS_SHOULDER"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_IntersectionSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_IntersectionSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#INTERSECTION"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RoadFromLeftSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RoadFromRightSign"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_PedestrianCrossingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_PedestrianCrossingSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN_CROSSING"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_PedestrianSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_PedestrianSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_RoundaboutSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_RoundaboutSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCULAR_ARROWS"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Care_UnevenRoadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_UnevenRoadSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#BUMP"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Color -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#CycleTrackSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CycleTrackSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#BICYCLE"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DangerWarningSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BUMP"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CHILDREN"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCULAR_ARROWS"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DANGEROUS_DESCENT"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DANGEROUS_SHOULDER"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#INTERSECTION"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN_CROSSING"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#UP-DOWN_ARROWS"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#!"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#TRIANGLE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#BLACK"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_2waysSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_ChildrenSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerousDescentSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerousShoulderSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_IntersectionSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_PedestrianCrossingSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_PedestrianSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_RoundaboutSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_UnevenRoadSign"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#DirectionPositionIndicationSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DirectionPositionIndicationSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#InformativeSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE_WITH_ARROWHEAD"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#EndOfPrioritySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#EndOfPrioritySign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>BAND</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#EndOfProhibitionSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#EndOfProhibitionSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#YELLOW"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCLE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>BAND</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#EscolaPostgrauSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#EscolaPostgrauSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DirectionPositionIndicationSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>ESCOLA_DE_POSTGRAU</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#DirectionPositionIndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ExcepteEmergènciesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ExcepteEmergènciesSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>EXCEPTE_EMERGÈNCIES</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#GiveWaySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#GiveWaySign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#INVERTED_TRIANGLE"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#InformativeSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#InformativeSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE_WITH_ARROWHEAD"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#BLACK"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#TEXT"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#BLACK"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DirectionPositionIndicationSign"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#LorryMass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#LorryMass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryMassSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#LORRY_MASS"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryMassSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#MandatoryDirectionSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MandatoryDirectionSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#LEFT_ARROW"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RIGHT_ARROW"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#MandatoryRoundaboutSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MandatoryRoundaboutSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCULAR_ARROWS"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#BLUE"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCLE"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CycleTrackSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MandatoryDirectionSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MandatoryRoundaboutSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PassThisSideSign"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Mass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Mass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryMassSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#MASS"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryMassSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#MassOnAxle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MassOnAxle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryMassSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#MASS_ON_AXLE_"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryMassSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#MaxSpeedLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MaxSpeedLimitSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#SPEED"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#BLACK"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#20"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#30"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryHeightSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryHeightSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#HEIGHT"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryMassSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryMassSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#LORRY_MASS"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MASS"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MASS_ON_AXLE_"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#LorryMass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Mass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MassOnAxle"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#NoParking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NoParking">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#BLUE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCLE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#DIAGONAL_BAR"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ParkingMotosSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ParkingMotosSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#P_MOTOS"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ParkingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ParkingSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#P"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PassRestrictionSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PassRestrictionSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#NO_SYMBOL"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCLE"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PassThisSideSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PassThisSideSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DOWN-LEFT_ARROW"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DOWN-RIGHT_ARROW"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PedestrianCrossing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PedestrianCrossing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN_CROSSING"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PedestrianSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PedestrianSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PriorityRoadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PriorityRoadSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#YELLOW"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#SQUARE"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BLACK"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#YELLOW"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#INVERTED_TRIANGLE"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#OCTAGON"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SQUARE"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#EndOfPrioritySign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#GiveWaySign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PriorityRoadSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#StopSign"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ProhibitoryRestrictiveSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:oneOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                                        </owl:oneOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#HORIZONTAL_BAR"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BLUE"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#YELLOW"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCLE"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#EndOfProhibitionSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MaxSpeedLimitSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryHeightSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NoEntryMassSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NoParking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PassRestrictionSign"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:oneOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BLACK"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                                        </owl:oneOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#HORIZONTAL_BAR"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BLUE"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RED"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#YELLOW"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCLE"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#INVERTED_TRIANGLE"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#OCTAGON"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SQUARE"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#RoadFromLeftSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RoadFromLeftSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_IntersectionSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>ROAD_FROM_LEFT</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Care_IntersectionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#RoadFromRightSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RoadFromRightSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_IntersectionSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>ROAD_FROM_RIGHT</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Care_IntersectionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Shape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#SortidaBombersSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SortidaBombersSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>SORTIDA_DE_BOMBERS</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SpecialRegulationSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolColor"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BLACK"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#borderColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#groundColor"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#BLUE"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#shape"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#RegulatorySign"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ParkingMotosSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ParkingSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PedestrianCrossing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PedestrianSign"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#StopSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#StopSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbol"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#STOP"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#Symbol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#TramEscalesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#TramEscalesSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>TRAM_AMB_ESCALES</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ZonaInundableSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ZonaInundableSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>ZONA_INUNDABLE</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#AdditionalPanels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#12PercentSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#12PercentSign">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerousDescentSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>12_PERCENT</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Care_DangerousDescentSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#20 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#20">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MaxSpeedLimitSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>20</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#MaxSpeedLimitSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#30 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#30">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MaxSpeedLimitSign"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#symbolValue"/>
+                        <owl:hasValue>30</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#MaxSpeedLimitSign"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#BAND -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BAND"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#BICYCLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BICYCLE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#BLACK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BLACK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#BLUE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BLUE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#BREAKDOWN_SERVICE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BREAKDOWN_SERVICE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#BUMP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#BUMP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#CAFETERIA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CAFETERIA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#CAMPING_AND_CARAVAN_SITE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CAMPING_AND_CARAVAN_SITE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#CAMPING_SITE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CAMPING_SITE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#CARAVAN_SITE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CARAVAN_SITE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#CHILDREN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CHILDREN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#CIRCLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCLE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#CIRCULAR_ARROWS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#CIRCULAR_ARROWS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#DANGEROUS_DESCENT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DANGEROUS_DESCENT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#DANGEROUS_SHOULDER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DANGEROUS_SHOULDER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#DIAGONAL_BAR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DIAGONAL_BAR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#DOWN-LEFT_ARROW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DOWN-LEFT_ARROW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#DOWN-RIGHT_ARROW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#DOWN-RIGHT_ARROW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#EMERGENCY_TELEPHONE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#EMERGENCY_TELEPHONE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ESCOLA_DE_POSTGRAU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ESCOLA_DE_POSTGRAU"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#EXCEPTE_EMERGÈNCIES -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#EXCEPTE_EMERGÈNCIES"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#EXTINGUISHER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#EXTINGUISHER"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#FILLING_STATION -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#FILLING_STATION"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#GREEN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#GREEN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#GREY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#GREY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#HEIGHT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#HEIGHT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#HORIZONTAL_BAR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#HORIZONTAL_BAR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#HOTEL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#HOTEL"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#INTERSECTION -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#INTERSECTION">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#INVERTED_TRIANGLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#INVERTED_TRIANGLE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#LEFT_ARROW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#LEFT_ARROW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#LINES -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#LINES">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#LORRY_MASS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#LORRY_MASS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#MASS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MASS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#MASS_ON_AXLE_ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MASS_ON_AXLE_">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#MOTEL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#MOTEL"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#NO_SYMBOL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#NO_SYMBOL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#OCTAGON -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#OCTAGON">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ORANGE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ORANGE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#P -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#P">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN_CROSSING -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PEDESTRIAN_CROSSING">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PERPENDICULAR_LINES -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PERPENDICULAR_LINES"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#PICNIC_SITE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#PICNIC_SITE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#P_MOTOS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#P_MOTOS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE_WITH_ARROWHEAD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RECTANGLE_WITH_ARROWHEAD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#RED -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RED">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#REFRESHMENTS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#REFRESHMENTS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#RESTAURANT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RESTAURANT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#RIGHT_ARROW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RIGHT_ARROW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ROAD_FROM_LEFT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ROAD_FROM_LEFT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ROAD_FROM_RIGHT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ROAD_FROM_RIGHT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#SORTIDA_DE_BOMBERS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SORTIDA_DE_BOMBERS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#SPEED -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SPEED">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#SQUARE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#SQUARE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#STARTING-POINT_FOR_WALKS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#STARTING-POINT_FOR_WALKS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#STOP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#STOP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#TELEPHONE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#TELEPHONE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#TEXT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#TEXT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#TRAM_AMB_ESCALES -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#TRAM_AMB_ESCALES"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#TRIANGLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#TRIANGLE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#UP-DOWN_ARROWS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#UP-DOWN_ARROWS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#WHITE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#WHITE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#YELLOW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#YELLOW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#YOUTH_HOSTEL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#YOUTH_HOSTEL"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#ZONA_INUNDABLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#ZONA_INUNDABLE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#! -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#!">
+        <rdf:type rdf:resource="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#10_T -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#10_T"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#12_PERCENT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#12_PERCENT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#20"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#3.5_T -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#3.5_T"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#30"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#4_M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#4_M"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#4.2_M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#4.2_M"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#4.9_M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#4.9_M"/>
+    
+
+
+    <!-- http://www.semanticweb.org/TeamD/roadsign.owl#6_T -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#6_T"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Color"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#RoadSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Shape"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl#Symbol"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

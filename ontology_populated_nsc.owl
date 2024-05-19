@@ -1,0 +1,2342 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/TeamD/roadsign.owl"
+         xmlns="http://www.semanticweb.org/TeamD/roadsign.owl#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/TeamD/roadsign.owl"/>
+
+<owl:ObjectProperty rdf:about="#borderColor">
+  <rdfs:domain rdf:resource="#RoadSign"/>
+  <rdfs:range rdf:resource="#Color"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#groundColor">
+  <rdfs:domain rdf:resource="#RoadSign"/>
+  <rdfs:range rdf:resource="#Color"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#shape">
+  <rdfs:domain rdf:resource="#RoadSign"/>
+  <rdfs:range rdf:resource="#Shape"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#symbol">
+  <rdfs:domain rdf:resource="#RoadSign"/>
+  <rdfs:range rdf:resource="#Symbol"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#symbolColor">
+  <rdfs:domain rdf:resource="#RoadSign"/>
+  <rdfs:range rdf:resource="#Color"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#image"/>
+
+<owl:DatatypeProperty rdf:about="#imageCreator">
+  <rdfs:subPropertyOf rdf:resource="#image"/>
+  <rdfs:domain rdf:resource="#RoadSign"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#imageDate">
+  <rdfs:subPropertyOf rdf:resource="#image"/>
+  <rdfs:domain rdf:resource="#RoadSign"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#symbolValue">
+  <rdfs:domain rdf:resource="#RoadSign"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#RoadSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:onClass rdf:resource="#Color"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:onClass rdf:resource="#Shape"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#borderColor"/>
+          <owl:onClass rdf:resource="#Color"/>
+          <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:onClass rdf:resource="#Symbol"/>
+          <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolColor"/>
+          <owl:onClass rdf:resource="#Color"/>
+          <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+          <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Color"/>
+
+<owl:Class rdf:about="#Shape"/>
+
+<owl:Class rdf:about="#Symbol"/>
+
+<owl:Class rdf:about="#AdditionalPanels">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#InformativeSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#RECTANGLE"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#InformativeSign"/>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#ExcepteEmergènciesSign"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#SortidaBombersSign"/>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first rdf:resource="#TramEscalesSign"/>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first rdf:resource="#ZonaInundableSign"/>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#InformativeSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#RoadSign"/>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Class>
+              <owl:unionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#shape"/>
+                  <owl:hasValue rdf:resource="#RECTANGLE"/>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#shape"/>
+                  <owl:hasValue rdf:resource="#RECTANGLE_WITH_ARROWHEAD"/>
+                </owl:Restriction>
+              </owl:unionOf>
+            </owl:Class>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#groundColor"/>
+              <owl:hasValue rdf:resource="#WHITE"/>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#borderColor"/>
+          <owl:hasValue rdf:resource="#BLACK"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#TEXT"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolColor"/>
+          <owl:hasValue rdf:resource="#BLACK"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#RoadSign"/>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#AdditionalPanels"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#DirectionPositionIndicationSign"/>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#ExcepteEmergènciesSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AdditionalPanels"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXCEPTE_EMERGÈNCIES</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AdditionalPanels"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SortidaBombersSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AdditionalPanels"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SORTIDA_DE_BOMBERS</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AdditionalPanels"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TramEscalesSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AdditionalPanels"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TRAM_AMB_ESCALES</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AdditionalPanels"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ZonaInundableSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AdditionalPanels"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZONA_INUNDABLE</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#AdditionalPanels"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_2waysSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#UP-DOWN_ARROWS"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DangerWarningSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#RoadSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#BUMP"/>
+                <rdf:Description rdf:about="#CHILDREN"/>
+                <rdf:Description rdf:about="#CIRCULAR_ARROWS"/>
+                <rdf:Description rdf:about="#DANGEROUS_DESCENT"/>
+                <rdf:Description rdf:about="#DANGEROUS_SHOULDER"/>
+                <rdf:Description rdf:about="#INTERSECTION"/>
+                <rdf:Description rdf:about="#PEDESTRIAN"/>
+                <rdf:Description rdf:about="#PEDESTRIAN_CROSSING"/>
+                <rdf:Description rdf:about="#UP-DOWN_ARROWS"/>
+                <rdf:Description rdf:about="#!"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#borderColor"/>
+          <owl:hasValue rdf:resource="#RED"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:hasValue rdf:resource="#WHITE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#TRIANGLE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolColor"/>
+          <owl:hasValue rdf:resource="#BLACK"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#RoadSign"/>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#Care_2waysSign"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#Care_ChildrenSign"/>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first rdf:resource="#Care_DangerSign"/>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first rdf:resource="#Care_DangerousDescentSign"/>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first rdf:resource="#Care_DangerousShoulderSign"/>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first rdf:resource="#Care_IntersectionSign"/>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first rdf:resource="#Care_PedestrianCrossingSign"/>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="#Care_PedestrianSign"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="#Care_RoundaboutSign"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:first rdf:resource="#Care_UnevenRoadSign"/>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_ChildrenSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#CHILDREN"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_DangerSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#!"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_DangerousDescentSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#DANGEROUS_DESCENT"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_DangerousShoulderSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#DANGEROUS_SHOULDER"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#DangerWarningSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_IntersectionSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#INTERSECTION"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#RoadFromLeftSign"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#RoadFromRightSign"/>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadFromLeftSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Care_IntersectionSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROAD_FROM_LEFT</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Care_IntersectionSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadFromRightSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Care_IntersectionSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROAD_FROM_RIGHT</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Care_IntersectionSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_PedestrianCrossingSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#PEDESTRIAN_CROSSING"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_PedestrianSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#PEDESTRIAN"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_RoundaboutSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#CIRCULAR_ARROWS"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Care_UnevenRoadSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DangerWarningSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#BUMP"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#CycleTrackSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MandatorySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#BICYCLE"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#MandatorySign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MandatorySign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#RegulatorySign"/>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#borderColor"/>
+              <owl:hasValue rdf:resource="#WHITE"/>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#groundColor"/>
+              <owl:hasValue rdf:resource="#BLUE"/>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#shape"/>
+              <owl:hasValue rdf:resource="#CIRCLE"/>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#symbolColor"/>
+              <owl:hasValue rdf:resource="#WHITE"/>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#CycleTrackSign"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#MandatoryDirectionSign"/>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first rdf:resource="#MandatoryRoundaboutSign"/>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first rdf:resource="#PassThisSideSign"/>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#DirectionPositionIndicationSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#InformativeSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#RECTANGLE_WITH_ARROWHEAD"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#EndOfPrioritySign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#PrioritySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAND</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#PrioritySign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PrioritySign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#RegulatorySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#borderColor"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#BLACK"/>
+                <rdf:Description rdf:about="#RED"/>
+                <rdf:Description rdf:about="#WHITE"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#RED"/>
+                <rdf:Description rdf:about="#WHITE"/>
+                <rdf:Description rdf:about="#YELLOW"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#INVERTED_TRIANGLE"/>
+                <rdf:Description rdf:about="#OCTAGON"/>
+                <rdf:Description rdf:about="#SQUARE"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#EndOfPrioritySign"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#GiveWaySign"/>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first rdf:resource="#PriorityRoadSign"/>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first rdf:resource="#StopSign"/>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#EndOfProhibitionSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ProhibitoryRestrictiveSign"/>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#groundColor"/>
+              <owl:hasValue rdf:resource="#WHITE"/>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#groundColor"/>
+              <owl:hasValue rdf:resource="#YELLOW"/>
+            </owl:Restriction>
+          </owl:unionOf>
+        </owl:Class>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#CIRCLE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAND</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ProhibitoryRestrictiveSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProhibitoryRestrictiveSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#RegulatorySign"/>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#borderColor"/>
+              <owl:someValuesFrom>
+                <owl:Class>
+                  <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#RED"/>
+                    <rdf:Description rdf:about="#WHITE"/>
+                  </owl:oneOf>
+                </owl:Class>
+              </owl:someValuesFrom>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#symbol"/>
+              <owl:hasValue rdf:resource="#HORIZONTAL_BAR"/>
+            </owl:Restriction>
+          </owl:unionOf>
+        </owl:Class>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#BLUE"/>
+                <rdf:Description rdf:about="#RED"/>
+                <rdf:Description rdf:about="#WHITE"/>
+                <rdf:Description rdf:about="#YELLOW"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#CIRCLE"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#EndOfProhibitionSign"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#MaxSpeedLimitSign"/>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first rdf:resource="#NoEntryHeightSign"/>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first rdf:resource="#NoEntryMassSign"/>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first rdf:resource="#NoParking"/>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first rdf:resource="#PassRestrictionSign"/>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#EscolaPostgrauSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DirectionPositionIndicationSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESCOLA_DE_POSTGRAU</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#DirectionPositionIndicationSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GiveWaySign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#PrioritySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#borderColor"/>
+          <owl:hasValue rdf:resource="#RED"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:hasValue rdf:resource="#WHITE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#INVERTED_TRIANGLE"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#PrioritySign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LorryMass">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#NoEntryMassSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#LORRY_MASS"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#NoEntryMassSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NoEntryMassSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ProhibitoryRestrictiveSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#LORRY_MASS"/>
+                <rdf:Description rdf:about="#MASS"/>
+                <rdf:Description rdf:about="#MASS_ON_AXLE_"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ProhibitoryRestrictiveSign"/>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#LorryMass"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#Mass"/>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first rdf:resource="#MassOnAxle"/>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#MandatoryDirectionSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MandatorySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#LEFT_ARROW"/>
+                <rdf:Description rdf:about="#RIGHT_ARROW"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#MandatorySign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MandatoryRoundaboutSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MandatorySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#CIRCULAR_ARROWS"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#MandatorySign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RegulatorySign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#RoadSign"/>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#borderColor"/>
+              <owl:someValuesFrom>
+                <owl:Class>
+                  <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BLACK"/>
+                    <rdf:Description rdf:about="#RED"/>
+                    <rdf:Description rdf:about="#WHITE"/>
+                  </owl:oneOf>
+                </owl:Class>
+              </owl:someValuesFrom>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#symbol"/>
+              <owl:hasValue rdf:resource="#HORIZONTAL_BAR"/>
+            </owl:Restriction>
+          </owl:unionOf>
+        </owl:Class>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#BLUE"/>
+                <rdf:Description rdf:about="#RED"/>
+                <rdf:Description rdf:about="#WHITE"/>
+                <rdf:Description rdf:about="#YELLOW"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#CIRCLE"/>
+                <rdf:Description rdf:about="#INVERTED_TRIANGLE"/>
+                <rdf:Description rdf:about="#OCTAGON"/>
+                <rdf:Description rdf:about="#RECTANGLE"/>
+                <rdf:Description rdf:about="#SQUARE"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#RoadSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PassThisSideSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MandatorySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#DOWN-LEFT_ARROW"/>
+                <rdf:Description rdf:about="#DOWN-RIGHT_ARROW"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#MandatorySign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mass">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#NoEntryMassSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#MASS"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#NoEntryMassSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MassOnAxle">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#NoEntryMassSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#MASS_ON_AXLE_"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#NoEntryMassSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MaxSpeedLimitSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ProhibitoryRestrictiveSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#borderColor"/>
+          <owl:hasValue rdf:resource="#RED"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:hasValue rdf:resource="#WHITE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#SPEED"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolColor"/>
+          <owl:hasValue rdf:resource="#BLACK"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ProhibitoryRestrictiveSign"/>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#20"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#30"/>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#20">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MaxSpeedLimitSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#MaxSpeedLimitSign"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Class>
+
+<owl:Class rdf:about="#30">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MaxSpeedLimitSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#MaxSpeedLimitSign"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NoEntryHeightSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ProhibitoryRestrictiveSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#HEIGHT"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ProhibitoryRestrictiveSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NoParking">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ProhibitoryRestrictiveSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#borderColor"/>
+          <owl:hasValue rdf:resource="#RED"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:hasValue rdf:resource="#BLUE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#CIRCLE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#DIAGONAL_BAR"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolColor"/>
+          <owl:hasValue rdf:resource="#RED"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ProhibitoryRestrictiveSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ParkingMotosSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#SpecialRegulationSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#P_MOTOS"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SpecialRegulationSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#RegulatorySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolColor"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:oneOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#BLACK"/>
+                <rdf:Description rdf:about="#WHITE"/>
+              </owl:oneOf>
+            </owl:Class>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#borderColor"/>
+          <owl:hasValue rdf:resource="#WHITE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:hasValue rdf:resource="#BLUE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#RECTANGLE"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#RegulatorySign"/>
+  <owl:disjointUnionOf>
+    <rdf:Description>
+      <rdf:first rdf:resource="#ParkingMotosSign"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#ParkingSign"/>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first rdf:resource="#PedestrianCrossing"/>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first rdf:resource="#PedestrianSign"/>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:disjointUnionOf>
+</owl:Class>
+
+<owl:Class rdf:about="#ParkingSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#SpecialRegulationSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#P"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PassRestrictionSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ProhibitoryRestrictiveSign"/>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#borderColor"/>
+                  <owl:hasValue rdf:resource="#RED"/>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#groundColor"/>
+                  <owl:hasValue rdf:resource="#WHITE"/>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#symbol"/>
+                  <owl:hasValue rdf:resource="#NO_SYMBOL"/>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#groundColor"/>
+                  <owl:hasValue rdf:resource="#RED"/>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#symbolColor"/>
+                  <owl:hasValue rdf:resource="#WHITE"/>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+          </owl:unionOf>
+        </owl:Class>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#CIRCLE"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#ProhibitoryRestrictiveSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PedestrianCrossing">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#SpecialRegulationSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#PEDESTRIAN_CROSSING"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PedestrianSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#SpecialRegulationSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#PEDESTRIAN"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#SpecialRegulationSign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PriorityRoadSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#PrioritySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#borderColor"/>
+          <owl:hasValue rdf:resource="#WHITE"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#groundColor"/>
+          <owl:hasValue rdf:resource="#YELLOW"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#shape"/>
+          <owl:hasValue rdf:resource="#SQUARE"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#PrioritySign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#StopSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#PrioritySign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbol"/>
+          <owl:hasValue rdf:resource="#STOP"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#PrioritySign"/>
+</owl:Class>
+
+<owl:Class rdf:about="#12PercentSign">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Care_DangerousDescentSign"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#symbolValue"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12_PERCENT</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Care_DangerousDescentSign"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#RECTANGLE">
+  <rdf:type rdf:resource="#Shape"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#UP-DOWN_ARROWS">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CHILDREN">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#!">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DANGEROUS_DESCENT">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DANGEROUS_SHOULDER">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INTERSECTION">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PEDESTRIAN_CROSSING">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PEDESTRIAN">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CIRCULAR_ARROWS">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BUMP">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BICYCLE">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RED">
+  <rdf:type rdf:resource="#Color"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#WHITE">
+  <rdf:type rdf:resource="#Color"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#TRIANGLE">
+  <rdf:type rdf:resource="#Shape"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BLACK">
+  <rdf:type rdf:resource="#Color"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RECTANGLE_WITH_ARROWHEAD">
+  <rdf:type rdf:resource="#Shape"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#YELLOW">
+  <rdf:type rdf:resource="#Color"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CIRCLE">
+  <rdf:type rdf:resource="#Shape"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INVERTED_TRIANGLE">
+  <rdf:type rdf:resource="#Shape"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#TEXT">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#LORRY_MASS">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#LEFT_ARROW">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RIGHT_ARROW">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BLUE">
+  <rdf:type rdf:resource="#Color"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MASS">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MASS_ON_AXLE_">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#SPEED">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HEIGHT">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DIAGONAL_BAR">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#P_MOTOS">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#P">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#NO_SYMBOL">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DOWN-LEFT_ARROW">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DOWN-RIGHT_ARROW">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#SQUARE">
+  <rdf:type rdf:resource="#Shape"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#OCTAGON">
+  <rdf:type rdf:resource="#Shape"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HORIZONTAL_BAR">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#STOP">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BAND"/>
+
+<owl:NamedIndividual rdf:about="#BREAKDOWN_SERVICE"/>
+
+<owl:NamedIndividual rdf:about="#CAFETERIA"/>
+
+<owl:NamedIndividual rdf:about="#CAMPING_AND_CARAVAN_SITE"/>
+
+<owl:NamedIndividual rdf:about="#CAMPING_SITE"/>
+
+<owl:NamedIndividual rdf:about="#CARAVAN_SITE"/>
+
+<owl:NamedIndividual rdf:about="#EMERGENCY_TELEPHONE"/>
+
+<owl:NamedIndividual rdf:about="#ESCOLA_DE_POSTGRAU"/>
+
+<owl:NamedIndividual rdf:about="#EXCEPTE_EMERGÈNCIES"/>
+
+<owl:NamedIndividual rdf:about="#EXTINGUISHER"/>
+
+<owl:NamedIndividual rdf:about="#FILLING_STATION"/>
+
+<owl:NamedIndividual rdf:about="#GREEN">
+  <rdf:type rdf:resource="#Color"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GREY">
+  <rdf:type rdf:resource="#Color"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HOTEL"/>
+
+<owl:NamedIndividual rdf:about="#LINES">
+  <rdf:type rdf:resource="#Symbol"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MOTEL"/>
+
+<owl:NamedIndividual rdf:about="#ORANGE">
+  <rdf:type rdf:resource="#Color"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PERPENDICULAR_LINES"/>
+
+<owl:NamedIndividual rdf:about="#PICNIC_SITE"/>
+
+<owl:NamedIndividual rdf:about="#REFRESHMENTS"/>
+
+<owl:NamedIndividual rdf:about="#RESTAURANT"/>
+
+<owl:NamedIndividual rdf:about="#ROAD_FROM_LEFT"/>
+
+<owl:NamedIndividual rdf:about="#ROAD_FROM_RIGHT"/>
+
+<owl:NamedIndividual rdf:about="#SORTIDA_DE_BOMBERS"/>
+
+<owl:NamedIndividual rdf:about="#STARTING-POINT_FOR_WALKS"/>
+
+<owl:NamedIndividual rdf:about="#TELEPHONE"/>
+
+<owl:NamedIndividual rdf:about="#TRAM_AMB_ESCALES"/>
+
+<owl:NamedIndividual rdf:about="#YOUTH_HOSTEL"/>
+
+<owl:NamedIndividual rdf:about="#ZONA_INUNDABLE"/>
+
+<owl:NamedIndividual rdf:about="#10_T"/>
+
+<owl:NamedIndividual rdf:about="#12_PERCENT"/>
+
+<owl:NamedIndividual rdf:about="#3.5_T"/>
+
+<owl:NamedIndividual rdf:about="#4_M"/>
+
+<owl:NamedIndividual rdf:about="#4.2_M"/>
+
+<owl:NamedIndividual rdf:about="#4.9_M"/>
+
+<owl:NamedIndividual rdf:about="#6_T"/>
+
+<owl:NamedIndividual rdf:about="#roadsign1">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#DANGEROUS_DESCENT"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_184212.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12_PERCENT</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign2">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#SPEED"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153449.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign3">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#CIRCULAR_ARROWS"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154226.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign4">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#INTERSECTION"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150834.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROAD_FROM_LEFT</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign5">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#SPEED"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150134.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign6">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#PEDESTRIAN_CROSSING"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154451.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign7">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#MASS_ON_AXLE_"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_184317.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10_T</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign8">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#OCTAGON"/>
+  <groundColor rdf:resource="#RED"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#STOP"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_145544.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign9">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#HEIGHT"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_153047.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.2_M</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign10">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#DANGEROUS_SHOULDER"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150236.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign11">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#SPEED"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_151100.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign12">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#HEIGHT"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154252.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.9_M</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign13">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#PEDESTRIAN"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153657.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign14">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#P"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153238.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign15">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#BLACK"/>
+  <symbol rdf:resource="#TEXT"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153657.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TRAM_AMB_ESCALES</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign16">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE_WITH_ARROWHEAD"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#BLACK"/>
+  <symbol rdf:resource="#TEXT"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_152542.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESCOLA_DE_POSTGRAU</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign17">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#DANGEROUS_SHOULDER"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150646.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign18">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#PEDESTRIAN"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150834.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign19">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#PEDESTRIAN_CROSSING"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_152104.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign20">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#PEDESTRIAN_CROSSING"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153534.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign21">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#P"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_151646.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign22">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#BUMP"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154425.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign23">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#HORIZONTAL_BAR"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_151932.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign24">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#BICYCLE"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_184053.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign25">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#UP-DOWN_ARROWS"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150907.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign26">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#NO_SYMBOL"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_152836.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign27">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#HEIGHT"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_153931.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4_M</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign28">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#PEDESTRIAN_CROSSING"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_152049.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign29">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#PEDESTRIAN_CROSSING"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154517.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign30">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#BICYCLE"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_184212.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign31">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#!"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_151153.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign32">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#INTERSECTION"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_151100.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROAD_FROM_LEFT</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign33">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#INVERTED_TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#NO_SYMBOL"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150013.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign34">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#!"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_184317.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign35">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#CHILDREN"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150134.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign36">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#OCTAGON"/>
+  <groundColor rdf:resource="#RED"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#STOP"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_150918.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign37">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#MASS"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_145957.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6_T</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign38">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#CIRCULAR_ARROWS"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153829.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign39">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#PEDESTRIAN_CROSSING"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153449.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign40">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#BUMP"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154050.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign41">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#BLACK"/>
+  <symbol rdf:resource="#TEXT"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_152836.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXCEPTE_EMERGÈNCIES</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign42">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#LEFT_ARROW"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_151915.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign43">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#SPEED"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_153602.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign44">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#P_MOTOS"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_152933.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign45">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#RIGHT_ARROW"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_145544.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign46">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#DOWN-RIGHT_ARROW"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153121.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign47">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#LORRY_MASS"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_152004.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5_T</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign48">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#BLACK"/>
+  <symbol rdf:resource="#TEXT"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154357.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SORTIDA_DE_BOMBERS</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign49">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#RECTANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#BLACK"/>
+  <symbol rdf:resource="#TEXT"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_184317.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZONA_INUNDABLE</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign50">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#!"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154357.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign51">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#BLUE"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#RIGHT_ARROW"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154627.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign52">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#INVERTED_TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#NO_SYMBOL"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153131.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign53">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#RED"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#DIAGONAL_BAR"/>
+  <symbolColor rdf:resource="#RED"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_152004.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign54">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#HORIZONTAL_BAR"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154708.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign55">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#INVERTED_TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#NO_SYMBOL"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154744.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign56">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#CIRCLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#SPEED"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_153829.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+  <symbolValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</symbolValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign57">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#BUMP"/>
+  <symbolColor rdf:resource="#BLACK"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154357.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign58">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#INVERTED_TRIANGLE"/>
+  <groundColor rdf:resource="#WHITE"/>
+  <borderColor rdf:resource="#RED"/>
+  <symbol rdf:resource="#NO_SYMBOL"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230202_154211.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</imageDate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#roadsign59">
+  <rdf:type rdf:resource="#RoadSign"/>
+  <shape rdf:resource="#OCTAGON"/>
+  <groundColor rdf:resource="#RED"/>
+  <borderColor rdf:resource="#WHITE"/>
+  <symbol rdf:resource="#STOP"/>
+  <symbolColor rdf:resource="#WHITE"/>
+  <image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.iiia.csic.es/~marco/kr/images/IMG_20230314_153901.jpg</image>
+  <imageCreator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Schorlemmer</imageCreator>
+  <imageDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-14</imageDate>
+</owl:NamedIndividual>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Color"/>
+    <rdf:Description rdf:about="#RoadSign"/>
+    <rdf:Description rdf:about="#Shape"/>
+    <rdf:Description rdf:about="#Symbol"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>
